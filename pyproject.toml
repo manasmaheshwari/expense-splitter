@@ -1,0 +1,19 @@
+[project]
+name = "expense-splitter"
+version = "0.1.0"
+description = "Splitwise-style expense splitting with minimum-transaction settlement"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+
+[project.scripts]
+splitter = "expense_splitter.cli:main"
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[tool.setuptools]
+packages = ["expense_splitter"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
